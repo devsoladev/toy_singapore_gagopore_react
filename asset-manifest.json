@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/toy_singapore_gagopore_react/static/css/main.31d6cfe0.css",
+    "main.js": "/toy_singapore_gagopore_react/static/js/main.15141e3f.js",
+    "static/media/qinggay.jpeg": "/toy_singapore_gagopore_react/static/media/qinggay.1b0e52774500b8514603.jpeg",
+    "static/media/singaporeflyer.jpeg": "/toy_singapore_gagopore_react/static/media/singaporeflyer.07daa19177144767f286.jpeg",
+    "static/media/littleindia.jpeg": "/toy_singapore_gagopore_react/static/media/littleindia.af5972753589ffd84312.jpeg",
+    "static/media/chilicrab.jpeg": "/toy_singapore_gagopore_react/static/media/chilicrab.9500aa3af455157e9b16.jpeg",
+    "static/media/hokienprownme.jpeg": "/toy_singapore_gagopore_react/static/media/hokienprownme.b93efed6935b95a1bdc2.jpeg",
+    "static/media/laksa.jpeg": "/toy_singapore_gagopore_react/static/media/laksa.894758eab57cb598aab6.jpeg",
+    "static/media/twg.jpeg": "/toy_singapore_gagopore_react/static/media/twg.787e01189cee6c830767.jpeg",
+    "static/media/kayatoast.jpeg": "/toy_singapore_gagopore_react/static/media/kayatoast.501cc12d1a104646d267.jpeg",
+    "static/media/euyansang.jpeg": "/toy_singapore_gagopore_react/static/media/euyansang.078c91180e045c5edf52.jpeg",
+    "static/media/yakunkaya.jpeg": "/toy_singapore_gagopore_react/static/media/yakunkaya.bc653a358cd8dd1eaad9.jpeg",
+    "static/media/android-chrome-512x512.png": "/toy_singapore_gagopore_react/static/media/android-chrome-512x512.db1230f3a0cd380037d3.png",
+    "static/media/favicon.ico": "/toy_singapore_gagopore_react/static/media/favicon.48cf0f0c5955b2e332c2.ico",
+    "static/media/sentosa.jpeg": "/toy_singapore_gagopore_react/static/media/sentosa.9af35de5ce6376004c26.jpeg",
+    "static/media/gardensbythebay.jpeg": "/toy_singapore_gagopore_react/static/media/gardensbythebay.e41d9e5972e338e8d1a9.jpeg",
+    "static/media/mountfaberpark.jpeg": "/toy_singapore_gagopore_react/static/media/mountfaberpark.a5d13e118f9fb1d24189.jpeg",
+    "static/media/uss.jpeg": "/toy_singapore_gagopore_react/static/media/uss.d77c3a77a99a0c6fd328.jpeg",
+    "static/media/tigerbalm.jpeg": "/toy_singapore_gagopore_react/static/media/tigerbalm.daccc73ce71ba6f69d59.jpeg",
+    "static/media/marinabay.jpeg": "/toy_singapore_gagopore_react/static/media/marinabay.c52908d265f691b2e76c.jpeg",
+    "index.html": "/toy_singapore_gagopore_react/index.html",
+    "static/media/about.txt": "/toy_singapore_gagopore_react/static/media/about.9008166a6594f7771b8d.txt",
+    "static/media/site.webmanifest": "/toy_singapore_gagopore_react/static/media/site.1c337fa2fa1515591f8d.webmanifest",
+    "main.15141e3f.js.map": "/toy_singapore_gagopore_react/static/js/main.15141e3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.15141e3f.js"
+  ]
+}
