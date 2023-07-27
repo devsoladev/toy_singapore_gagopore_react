@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
+import Layout from '../components/common/Layout';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import CustomCard from './CustomCard';
-import CustomModal from './CustomModal';
-import items from '../../data.json';
+import CommonCard from '../components/common/CommonCard';
+import CommonModal from '../components/common/CommonModal';
+import items from '../data.json';
 
-const CustomContainer = () => {
+function ListPage() {
 	const [isModalOpen, setModalOpenStatus] = useState(false);
 
 	const handleModalOpen = (value) => {
@@ -18,7 +19,7 @@ const CustomContainer = () => {
 
 	return (
 		<>
-			<main>
+			<Layout>
 				<Box
 					sx={{
 						bgcolor: 'background.paper',
@@ -48,9 +49,7 @@ const CustomContainer = () => {
 							spacing={2}
 							justifyContent='center'
 						>
-							<Button variant='contained' onClick={() => handleModalOpen(true)}>
-								ADD MORE INFO
-							</Button>
+							<Button variant='contained'>ADD MORE INFO</Button>
 						</Stack>
 					</Container>
 				</Box>
@@ -58,18 +57,18 @@ const CustomContainer = () => {
 					<Grid container spacing={4}>
 						{items.map((item) => (
 							<Grid item key={item.id} xs={12} sm={6} md={4}>
-								<CustomCard item={item} />
+								<CommonCard item={item} />
 							</Grid>
 						))}
 					</Grid>
 				</Container>
-			</main>
-			<CustomModal
+			</Layout>
+			<CommonModal
 				handleModalOpen={handleModalOpen}
 				isModalOpen={isModalOpen}
 			/>
 		</>
 	);
-};
+}
 
-export default CustomContainer;
+export default ListPage;

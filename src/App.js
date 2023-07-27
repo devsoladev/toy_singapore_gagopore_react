@@ -1,13 +1,10 @@
-import Header from './components/common/Header';
-import CustomContainer from './components/common/CustomContainer';
-import Footer from './components/common/Footer';
+import MainPage from './pages/MainPage';
+import ListPage from './pages/ListPage';
 
 function App() {
 	return (
 		<div className='App'>
-			<Header />
-			<CustomContainer />
-			<Footer />
+			<MainPage />
 		</div>
 	);
 }

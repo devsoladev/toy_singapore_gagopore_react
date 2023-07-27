@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-function CustomCard({ item }) {
+function CommonCard({ item }) {
 	const imgUrl = require(`../../images/${item.thumbnail_path}`);
 
 	return (
@@ -33,4 +33,4 @@ function CustomCard({ item }) {
 	);
 }
 
-export default CustomCard;
+export default CommonCard;
