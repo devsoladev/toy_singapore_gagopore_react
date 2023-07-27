@@ -8,7 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
-function CustomModal({ handleModalOpen, isModalOpen }) {
+function CommonModal({ handleModalOpen, isModalOpen }) {
 	return (
 		<div hidden={!isModalOpen}>
 			<Button variant='outlined' onClick={handleModalOpen}>
@@ -60,4 +60,4 @@ function CustomModal({ handleModalOpen, isModalOpen }) {
 	);
 }
 
-export default CustomModal;
+export default CommonModal;

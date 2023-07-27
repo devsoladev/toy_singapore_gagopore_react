@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
-function Copyright() {
+const Copyright = () => {
 	return (
 		<Typography variant='body2' color='text.secondary' align='center'>
 			{'Copyright © '}
@@ -14,11 +14,17 @@ function Copyright() {
 			{'.'}
 		</Typography>
 	);
-}
+};
 
 const Footer = (props) => {
 	return (
-		<Box sx={{ bgcolor: 'background.paper', p: 6 }} component='footer'>
+		<Box
+			sx={{
+				bgcolor: 'background.paper',
+				p: 6,
+			}}
+			component='footer'
+		>
 			<Typography variant='h6' align='center' gutterBottom>
 				Footer
 			</Typography>
