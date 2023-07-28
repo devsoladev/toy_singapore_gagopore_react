@@ -3,10 +3,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 function CommonCard({ item }) {
-	const imgUrl = require(`../../images/${item.thumbnail_path}`);
-
 	return (
 		<Card
 			sx={{
@@ -21,13 +20,14 @@ function CommonCard({ item }) {
 					// 16:9
 					pt: '56.25%',
 				}}
-				image={imgUrl}
+				image={item.thumbnailPath}
 			/>
 			<CardContent sx={{ flexGrow: 1 }}>
 				<Typography gutterBottom variant='h5' component='h2'>
 					{item.title}
 				</Typography>
-				<Typography>{item.description}</Typography>
+				<Divider variant='light' />
+				<Typography pt={2}>{item.description}</Typography>
 			</CardContent>
 		</Card>
 	);

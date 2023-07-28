@@ -8,17 +8,23 @@ import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
-function CommonModal({ handleModalOpen, isModalOpen }) {
+function CommonModal({ handleAddItem, handleModalOpen, isModalOpen }) {
+	const [title, setTitle] = useState('');
+	const [description, setDescription] = useState('');
+	const [thumbnailPath, setThumbnailPath] = useState('');
+
+	const handleSubmit = () => {
+		handleAddItem({ title, description, thumbnailPath });
+		handleModalOpen(false);
+	};
+
 	return (
 		<div hidden={!isModalOpen}>
-			<Button variant='outlined' onClick={handleModalOpen}>
-				Open form dialog
-			</Button>
 			<Dialog open={isModalOpen} onClose={() => handleModalOpen(false)}>
-				<DialogTitle>ADD NEW ITEM</DialogTitle>
+				<DialogTitle>ADD NEW CONTENTS</DialogTitle>
 				<DialogContent>
 					<DialogContentText>
-						You can add new singapore travel contents!
+						You can add new singapore travel contents.
 					</DialogContentText>
 					<Box sx={{ width: 300, maxWidth: '100%' }}>
 						<TextField
@@ -26,8 +32,9 @@ function CommonModal({ handleModalOpen, isModalOpen }) {
 							placeholder='Please enter title'
 							label='Title'
 							id='filled-hidden-label-normal'
-							defaultValue=''
+							value={title}
 							variant='standard'
+							onChange={(e) => setTitle(e.target.value)}
 						/>
 					</Box>
 					<Box sx={{ width: 300, maxWidth: '100%' }}>
@@ -36,8 +43,9 @@ function CommonModal({ handleModalOpen, isModalOpen }) {
 							placeholder='Please enter description'
 							label='Description'
 							id='filled-hidden-label-normal'
-							defaultValue=''
+							value={description}
 							variant='standard'
+							onChange={(e) => setDescription(e.target.value)}
 						/>
 					</Box>
 					<Box sx={{ width: 300, maxWidth: '100%' }}>
@@ -46,14 +54,15 @@ function CommonModal({ handleModalOpen, isModalOpen }) {
 							placeholder='Please enter image url'
 							label='Image'
 							id='filled-hidden-label-normal'
-							defaultValue=''
+							value={thumbnailPath}
 							variant='standard'
+							onChange={(e) => setThumbnailPath(e.target.value)}
 						/>
 					</Box>
 				</DialogContent>
 				<DialogActions>
 					<Button onClick={() => handleModalOpen(false)}>CANCEL</Button>
-					<Button onClick={() => handleModalOpen(false)}>SAVE</Button>
+					<Button onClick={handleSubmit}>SAVE</Button>
 				</DialogActions>
 			</Dialog>
 		</div>

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
+import { red } from '@mui/material/colors';
 import Layout from '../components/common/Layout';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 
 const ColorButton = styled(Button)(({ theme }) => ({
 	color: theme.palette.getContrastText(red[500]),
