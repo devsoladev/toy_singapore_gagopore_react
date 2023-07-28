@@ -1,11 +1,14 @@
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import ListPage from './pages/ListPage';
 
 function App() {
 	return (
-		<div className='App'>
-			<MainPage />
-		</div>
+		<Routes>
+			<Route path='/' element={<MainPage />} />
+			<Route path='/list' element={<ListPage />} />
+		</Routes>
 	);
 }
 

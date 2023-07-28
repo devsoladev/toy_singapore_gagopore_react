@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -13,9 +14,11 @@ const Header = () => {
 	return (
 		<ColorAppBar color='primary' position='relative'>
 			<Toolbar>
-				<Typography variant='h6' color='inherit' noWrap>
-					Singapore Gagopore
-				</Typography>
+				<Link to='/'>
+					<Typography variant='h6' color='inherit' noWrap>
+						Singapore Gagopore
+					</Typography>
+				</Link>
 			</Toolbar>
 		</ColorAppBar>
 	);

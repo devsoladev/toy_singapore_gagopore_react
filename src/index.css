@@ -8,8 +8,7 @@ body {
 	box-sizing: border-box;
 }
 
-#root,
-.App {
+#root {
 	min-height: 100vh;
 	position: relative;
 }

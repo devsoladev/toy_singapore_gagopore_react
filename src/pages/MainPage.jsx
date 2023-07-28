@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Layout from '../components/common/Layout';
 import Container from '@mui/material/Container';
@@ -17,6 +18,8 @@ const ColorButton = styled(Button)(({ theme }) => ({
 }));
 
 function MainPage() {
+	const navigate = useNavigate();
+
 	return (
 		<Layout>
 			<Box
@@ -24,7 +27,7 @@ function MainPage() {
 					width: '100%',
 					height: '100%',
 					bgcolor: 'background.paper',
-					pt: 30,
+					pt: 15,
 				}}
 			>
 				<Container maxWidth='sm'>
@@ -52,7 +55,9 @@ function MainPage() {
 						spacing={2}
 						justifyContent='center'
 					>
-						<ColorButton variant='contained'>GO RIGHT NOW ✈️</ColorButton>
+						<ColorButton variant='contained' onClick={() => navigate('/list')}>
+							GO RIGHT NOW ✈️
+						</ColorButton>
 					</Stack>
 				</Container>
 			</Box>
