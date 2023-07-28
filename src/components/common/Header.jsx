@@ -10,15 +10,18 @@ const ColorAppBar = styled(AppBar)(({ theme }) => ({
 	backgroundColor: red[500],
 }));
 
+const StyledLink = styled(Link)`
+	color: white;
+	text-decoration: none;
+`;
+
 const Header = () => {
 	return (
 		<ColorAppBar color='primary' position='relative'>
 			<Toolbar>
-				<Link to='/'>
-					<Typography variant='h6' color='inherit' noWrap>
-						Singapore Gagopore
-					</Typography>
-				</Link>
+				<StyledLink to='/'>
+					<Typography variant='h6'>Singapore Gagopore</Typography>
+				</StyledLink>
 			</Toolbar>
 		</ColorAppBar>
 	);
