@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
+import { red } from '@mui/material/colors';
 import Layout from '../components/common/Layout';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
@@ -8,13 +10,26 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CommonCard from '../components/common/CommonCard';
 import CommonModal from '../components/common/CommonModal';
-import items from '../data.json';
+import data from '../data.json';
+
+const ColorButton = styled(Button)(({ theme }) => ({
+	color: theme.palette.getContrastText(red[500]),
+	backgroundColor: red[500],
+	'&:hover': {
+		backgroundColor: red[700],
+	},
+}));
 
 function ListPage() {
 	const [isModalOpen, setModalOpenStatus] = useState(false);
+	const [items, setItems] = useState(data);
 
 	const handleModalOpen = (value) => {
 		setModalOpenStatus(value);
+	};
+
+	const handleAddItem = (item) => {
+		setItems([item, ...items]);
 	};
 
 	return (
@@ -30,26 +45,34 @@ function ListPage() {
 					<Container maxWidth='sm'>
 						<Typography
 							component='h1'
-							variant='h2'
+							variant='h3'
 							align='center'
 							color='text.primary'
 							gutterBottom
 						>
-							Hello, Singapore
+							Let's go to Singapore !
 						</Typography>
 						<Typography
 							variant='h5'
 							align='center'
 							color='text.secondary'
 							paragraph
-						></Typography>
+						>
+							You can look for several contents about Singapore. <br />
+							Also you can add a new contents.
+						</Typography>
 						<Stack
 							sx={{ pt: 4 }}
 							direction='row'
 							spacing={2}
 							justifyContent='center'
 						>
-							<Button variant='contained'>ADD MORE INFO</Button>
+							<ColorButton
+								variant='contained'
+								onClick={() => handleModalOpen(true)}
+							>
+								ADD CONTENTS
+							</ColorButton>
 						</Stack>
 					</Container>
 				</Box>
@@ -64,6 +87,7 @@ function ListPage() {
 				</Container>
 			</Layout>
 			<CommonModal
+				handleAddItem={handleAddItem}
 				handleModalOpen={handleModalOpen}
 				isModalOpen={isModalOpen}
 			/>
